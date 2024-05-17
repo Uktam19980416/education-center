@@ -13,8 +13,24 @@ export default {
         '-0.5px': '-0.5px',
         '0.2em': '0.2em',
       },
+      clipPath: {
+        custom:
+          'polygon(69% 5%, 100% 1%, 100% 94%, 68% 100%, 35% 93%, 0 100%, 0 7%, 36% 0);',
+      },
     },
   },
-  plugins: [daisyui],
+  plugins: [
+    daisyui,
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.clip-custom': {
+          clipPath:
+            'polygon(69% 5%, 100% 1%, 100% 94%, 68% 100%, 35% 93%, 0 100%, 0 7%, 36% 0);',
+        },
+      }
+
+      addUtilities(newUtilities, ['responsive', 'hover'])
+    },
+  ],
 }
 

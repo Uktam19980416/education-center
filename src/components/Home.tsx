@@ -1,6 +1,7 @@
 import {FC} from 'react'
 import EducationInfo from './EducationInfo'
 import Prices from './Prices'
+import { SignupForm } from './SignupForm'
 
 const Home: FC = () => {
   return (
@@ -10,6 +11,7 @@ const Home: FC = () => {
         <EducationInfo />
         <Prices />
       </div>
+        <SignupForm />
     </>
   )
 }
